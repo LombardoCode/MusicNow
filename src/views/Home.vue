@@ -6,13 +6,19 @@
 				type="text"
 				name="query_text"
 				placeholder="Búsqueda de canciones"
+				v-model="search_query"
 			/>
-			<Button class="mt-2 md:mt-0 md:ml-2" txt="Buscar"></Button>
+			<Button
+				class="mt-2 md:mt-0 md:ml-2"
+				txt="Buscar"
+				@click="search()"
+			></Button>
 		</div>
 	</Container>
 </template>
 
 <script>
+import axios from "axios";
 import Container from "@/components/utils/Container.vue";
 import H1 from "@/components/utils/html/H1.vue";
 import Input from "@/components/utils/html/Input.vue";
@@ -24,6 +30,24 @@ export default {
 		H1,
 		Input,
 		Button,
+	},
+	data() {
+		return {
+			baseUrl: process.env.VUE_APP_CLIENT,
+			search_query: "",
+		};
+	},
+	methods: {
+		search() {
+			axios
+				.get(this.baseUrl + "/search?q=" + this.search_query)
+				.then((res) => {
+					console.log(res.data);
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		},
 	},
 };
 </script>
