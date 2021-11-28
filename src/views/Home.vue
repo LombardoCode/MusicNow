@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<Container>
+		<H1 txt="¿Qué vamos a escuchar hoy?" class="text-center mt-5"></H1>
+		<div class="flex flex-col md:flex-row md:justify-center text-center mt-6">
+			<Input
+				type="text"
+				name="query_text"
+				placeholder="Búsqueda de canciones"
+			/>
+			<Button class="mt-2 md:mt-0 md:ml-2" txt="Buscar"></Button>
+		</div>
+	</Container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Container from "@/components/utils/Container.vue";
+import H1 from "@/components/utils/html/H1.vue";
+import Input from "@/components/utils/html/Input.vue";
+import Button from "@/components/utils/html/Button.vue";
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+	name: "Home",
+	components: {
+		Container,
+		H1,
+		Input,
+		Button,
+	},
+};
 </script>
