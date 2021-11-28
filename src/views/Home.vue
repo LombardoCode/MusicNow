@@ -16,12 +16,8 @@
 			></Button>
 		</div>
 
-		<div class="track-list">
-			<TrackInList
-				v-for="(track, index) in tracks"
-				:key="index"
-				:track="track"
-			/>
+		<div v-if="tracks.length > 0">
+			<TracksContainer :tracks="tracks"></TracksContainer>
 		</div>
 	</Container>
 </template>
@@ -33,6 +29,7 @@ import H1 from "@/components/utils/html/H1.vue";
 import Input from "@/components/utils/html/Input.vue";
 import Button from "@/components/utils/html/Button.vue";
 import TrackInList from "@/components/utils/TrackInList.vue";
+import TracksContainer from "@/components/utils/TracksContainer.vue";
 export default {
 	name: "Home",
 	components: {
@@ -41,6 +38,7 @@ export default {
 		Input,
 		Button,
 		TrackInList,
+		TracksContainer,
 	},
 	data() {
 		return {
