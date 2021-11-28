@@ -6,6 +6,7 @@
 				type="text"
 				name="query_text"
 				placeholder="Búsqueda de canciones"
+				v-on:keyup.enter="search()"
 				v-model="search_query"
 			/>
 			<Button
@@ -13,6 +14,14 @@
 				txt="Buscar"
 				@click="search()"
 			></Button>
+		</div>
+
+		<div class="track-list">
+			<TrackInList
+				v-for="(track, index) in tracks"
+				:key="index"
+				:track="track"
+			/>
 		</div>
 	</Container>
 </template>
@@ -23,6 +32,7 @@ import Container from "@/components/utils/Container.vue";
 import H1 from "@/components/utils/html/H1.vue";
 import Input from "@/components/utils/html/Input.vue";
 import Button from "@/components/utils/html/Button.vue";
+import TrackInList from "@/components/utils/TrackInList.vue";
 export default {
 	name: "Home",
 	components: {
@@ -30,19 +40,23 @@ export default {
 		H1,
 		Input,
 		Button,
+		TrackInList,
 	},
 	data() {
 		return {
 			baseUrl: process.env.VUE_APP_CLIENT,
 			search_query: "",
+			tracks: [],
 		};
 	},
 	methods: {
-		search() {
-			axios
+		async search() {
+			this.tracks = [];
+			await axios
 				.get(this.baseUrl + "/search?q=" + this.search_query)
 				.then((res) => {
-					console.log(res.data);
+					this.tracks = res.data.data;
+					console.log(this.tracks);
 				})
 				.catch((err) => {
 					console.log(err);
