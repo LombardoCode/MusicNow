@@ -1,13 +1,12 @@
 <template>
-	<div class="tracks-container text-white">
-		<table>
+	<div class="tracks-container text-white mt-4">
+		<table class="w-full">
 			<thead>
 				<tr>
-					<th></th>
-					<th>Canción</th>
-					<th>Artista</th>
-					<th>Album</th>
-					<th>Player</th>
+					<th class="py-2"></th>
+					<th class="py-2">Canción</th>
+					<th class="py-2">Artista</th>
+					<th class="py-2">Album</th>
 				</tr>
 			</thead>
 			<tbody>
