@@ -15,21 +15,17 @@
 				@click="search()"
 			></Button>
 		</div>
-
-		<div v-if="tracks.length > 0">
-			<TracksContainer :tracks="tracks"></TracksContainer>
-		</div>
 	</Container>
 </template>
 
 <script>
-import axios from "axios";
 import Container from "@/components/utils/Container.vue";
 import H1 from "@/components/utils/html/H1.vue";
 import Input from "@/components/utils/html/Input.vue";
 import Button from "@/components/utils/html/Button.vue";
 import TrackInList from "@/components/utils/TrackInList.vue";
 import TracksContainer from "@/components/utils/TracksContainer.vue";
+import Tag from "@/components/utils/Tag.vue";
 export default {
 	name: "Home",
 	components: {
@@ -39,6 +35,7 @@ export default {
 		Button,
 		TrackInList,
 		TracksContainer,
+		Tag,
 	},
 	data() {
 		return {
@@ -49,16 +46,12 @@ export default {
 	},
 	methods: {
 		async search() {
-			this.tracks = [];
-			await axios
-				.get(this.baseUrl + "/search?q=" + this.search_query)
-				.then((res) => {
-					this.tracks = res.data.data;
-					console.log(this.tracks);
-				})
-				.catch((err) => {
-					console.log(err);
-				});
+			this.$router.push({
+				name: "SearchSong",
+				params: {
+					search_query: this.search_query,
+				},
+			});
 		},
 	},
 };

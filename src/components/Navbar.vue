@@ -1,10 +1,8 @@
 <template>
 	<div class="w-full bg-black text-white">
-		<div class="container mx-auto flex justify-between items-center py-2">
-			<div
-				class="py-1 px-3 hover:bg-white hover:text-black rounded-md transition-all duration-200 cursor-pointer"
-			>
-				<span>MusicNow!</span>
+		<div class="container mx-auto flex justify-between items-center py-3">
+			<div>
+				<Link to="/" txt="MusicNow" />
 			</div>
 			<nav>
 				<ul>

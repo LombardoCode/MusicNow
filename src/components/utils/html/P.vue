@@ -1,9 +1,3 @@
 <template>
-	<p class="text-white"><slot></slot></p>
+	<p class="text-white text-base"><slot></slot></p>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style></style>

@@ -1,8 +1,8 @@
 <template>
-	<div class="tracks-container text-white mt-4">
-		<table class="w-full">
+	<div v-if="tracks.length > 0" class="tracks-container text-white mt-4">
+		<table>
 			<thead>
-				<tr>
+				<tr class="text-left">
 					<th class="py-2"></th>
 					<th class="py-2">Canción</th>
 					<th class="py-2">Artista</th>
