@@ -41,7 +41,7 @@ const routes = [
 				name: "SearchArtist",
 				component: () =>
 					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Search.vue"
+						/* webpackChunkName: "search" */ "../views/Searches/Artists.vue"
 					),
 			},
 			{
