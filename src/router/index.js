@@ -53,20 +53,10 @@ const routes = [
 					),
 			},
 			{
-				path: "episode",
-				name: "SearchEpisode",
+				path: "users",
+				name: "SearchUser",
 				component: () =>
-					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Search.vue"
-					),
-			},
-			{
-				path: "profile",
-				name: "SearchProfile",
-				component: () =>
-					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Search.vue"
-					),
+					import(/* webpackChunkName: "search" */ "../views/Searches/User.vue"),
 			},
 		],
 	},

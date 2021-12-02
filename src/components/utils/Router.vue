@@ -14,8 +14,7 @@
 				<Tag name="SearchAlbum">Albumes</Tag>
 				<Tag name="SearchArtist">Artistas</Tag>
 				<Tag name="SearchPodcast">Podcasts</Tag>
-				<Tag name="SearchEpisode">Episodios</Tag>
-				<Tag name="SearchProfile">Perfiles</Tag>
+				<Tag name="SearchUser">Usuarios</Tag>
 			</TagContainer>
 		</Container>
 		<router-view></router-view>
