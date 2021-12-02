@@ -49,7 +49,7 @@ const routes = [
 				name: "SearchPodcast",
 				component: () =>
 					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Search.vue"
+						/* webpackChunkName: "search" */ "../views/Searches/Podcasts.vue"
 					),
 			},
 			{

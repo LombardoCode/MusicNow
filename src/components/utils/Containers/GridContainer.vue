@@ -13,6 +13,9 @@
 			<div v-if="data.type == 'artist'">
 				<ArtistGridItem :item="data"></ArtistGridItem>
 			</div>
+			<div v-if="data.type == 'podcast'">
+				<PodcastGridItem :item="data"></PodcastGridItem>
+			</div>
 		</div>
 		<slot></slot>
 	</div>
@@ -22,6 +25,7 @@
 import PlaylistGridItem from "@/components/utils/Containers/GridItems/Playlist.vue";
 import AlbumGridItem from "@/components/utils/Containers/GridItems/Album.vue";
 import ArtistGridItem from "@/components/utils/Containers/GridItems/Artist.vue";
+import PodcastGridItem from "@/components/utils/Containers/GridItems/Podcast.vue";
 export default {
 	mounted() {
 		console.log(this.data_to_grid);
@@ -33,6 +37,7 @@ export default {
 		PlaylistGridItem,
 		AlbumGridItem,
 		ArtistGridItem,
+		PodcastGridItem,
 	},
 };
 </script>
