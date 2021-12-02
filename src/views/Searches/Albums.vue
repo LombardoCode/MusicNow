@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Container>
-			<GridContainer :data_to_grid="playlists"></GridContainer>
+			<GridContainer :data_to_grid="albums"></GridContainer>
 		</Container>
 	</div>
 </template>
@@ -22,7 +22,7 @@ export default {
 		return {
 			baseUrl: process.env.VUE_APP_CLIENT,
 			search_query: this.$route.params.search_query,
-			playlists: [],
+			albums: [],
 		};
 	},
 	methods: {
@@ -36,9 +36,9 @@ export default {
 				});
 			}
 			await axios
-				.get(this.baseUrl + "/search/playlist?q=" + this.search_query)
+				.get(this.baseUrl + "/search/album?q=" + this.search_query)
 				.then((res) => {
-					this.playlists = res.data.data;
+					this.albums = res.data.data;
 					console.log(res.data);
 				})
 				.catch((err) => {

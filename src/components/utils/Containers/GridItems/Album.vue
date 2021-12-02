@@ -1,13 +1,13 @@
 <template>
 	<div class="mt-5 mb-10 hover:bg-gray-800 duration-200 cursor-pointer py-2">
 		<div class="py-2 px-5">
-			<img :src="playlist.picture_xl" alt="" class="w-full rounded-xl" />
+			<img :src="item.cover_xl" alt="" class="w-full rounded-xl" />
 		</div>
 		<div class="px-5">
-			<P>{{ playlist.title }}</P>
+			<P>{{ item.title }}</P>
 		</div>
 		<div class="px-5">
-			<PSmall>{{ playlist.nb_tracks }} canciones</PSmall>
+			<PSmall>De {{ item.artist.name }}</PSmall>
 		</div>
 	</div>
 </template>
@@ -17,7 +17,7 @@ import P from "@/components/utils/html/P.vue";
 import PSmall from "@/components/utils/html/PSmall.vue";
 export default {
 	props: {
-		playlist: Object,
+		item: Object,
 	},
 	components: {
 		P,
