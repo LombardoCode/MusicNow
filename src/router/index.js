@@ -9,6 +9,7 @@ const routes = [
 	{
 		path: "/search/:search_query",
 		name: "Search",
+		props: true,
 		component: () =>
 			import(/* webpackChunkName: "search" */ "../components/utils/Router.vue"),
 		children: [
@@ -23,6 +24,7 @@ const routes = [
 			{
 				path: "playlist",
 				name: "SearchPlaylist",
+				props: true,
 				component: () =>
 					import(
 						/* webpackChunkName: "search" */ "../views/Searches/Playlists.vue"
@@ -41,7 +43,7 @@ const routes = [
 				name: "SearchArtist",
 				component: () =>
 					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Artists.vue"
+						/* webpackChunkN434ame: "search" */ "../views/Searches/Artists.vue"
 					),
 			},
 			{

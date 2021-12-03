@@ -33,6 +33,16 @@ export default {
 		TagContainer,
 		Tag,
 	},
+	data() {
+		return {
+			search_query: "",
+		};
+	},
+	methods: {
+		search() {
+			this.emitter.emit("search", this.search_query);
+		},
+	},
 };
 </script>
 
