@@ -2,8 +2,8 @@
 	<div>
 		<Container>
 			<Loading :loading="loading" />
-			<NotFound :found="found" :query="search_query" />
-			<GridContainer :data_to_grid="playlists"></GridContainer>
+			<NotFound :found="found" :query="$route.params.search_query" />
+			<SearchResults :data_to_grid="playlists"></SearchResults>
 		</Container>
 	</div>
 </template>
@@ -12,14 +12,14 @@
 import Container from "@/components/utils/Container.vue";
 import Loading from "@/components/utils/UI/Loading.vue";
 import NotFound from "@/components/utils/UI/NotFound.vue";
-import GridContainer from "@/components/utils/Containers/GridContainer.vue";
+import SearchResults from "@/components/utils/Containers/SearchResults.vue";
 import getResults from "@/mixins/getResults.js";
 export default {
 	components: {
 		Container,
 		Loading,
 		NotFound,
-		GridContainer,
+		SearchResults,
 	},
 	mixins: [getResults],
 	mounted() {

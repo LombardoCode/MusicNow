@@ -1,49 +1,66 @@
 <template>
 	<div>
 		<Container>
-			<TracksContainer :tracks="tracks"></TracksContainer>
+			<Loading :loading="loading" />
+			<NotFound :found="found" :query="search_query" />
+			<SearchResults :data_to_grid="tracks"></SearchResults>
 		</Container>
 	</div>
 </template>
 
 <script>
-import axios from "axios";
 import Container from "@/components/utils/Container.vue";
-import TracksContainer from "@/components/utils/TracksContainer.vue";
+import Loading from "@/components/utils/UI/Loading.vue";
+import NotFound from "@/components/utils/UI/NotFound.vue";
+import SearchResults from "@/components/utils/Containers/SearchResults.vue";
+import getResults from "@/mixins/getResults.js";
 export default {
 	components: {
 		Container,
-		TracksContainer,
+		Loading,
+		NotFound,
+		SearchResults,
 	},
+	mixins: [getResults],
 	mounted() {
 		this.search();
+
+		this.emitter.on("search", (search_query) => {
+			this.$router.push({
+				name: "SearchSong",
+				params: {
+					search_query,
+				},
+			});
+		});
 	},
 	data() {
 		return {
+			loading: true,
+			found: true,
 			baseUrl: process.env.VUE_APP_CLIENT,
+			type: "track",
 			search_query: this.$route.params.search_query,
 			tracks: [],
 		};
 	},
 	methods: {
-		async search() {
-			if (this.$route.params.search_query != this.search_query) {
-				this.$router.push({
-					name: "Search",
-					params: {
-						search_query: this.search_query,
-					},
-				});
-			}
-			await axios
-				.get(this.baseUrl + "/search?q=" + this.search_query)
-				.then((res) => {
-					this.tracks = res.data.data;
-					console.log(this.tracks);
-				})
-				.catch((err) => {
-					console.log(err);
-				});
+		async search(search_query = this.search_query) {
+			this.loading = true;
+			this.found = true;
+			this.tracks = await this.getResults(
+				this.baseUrl,
+				this.type,
+				search_query
+			);
+			this.found = this.tracks.length > 0 ? true : false;
+			this.loading = false;
+		},
+	},
+	watch: {
+		"$route.params.search_query": function (search_query) {
+			this.tracks = [];
+			this.search(search_query);
 		},
 	},
 };

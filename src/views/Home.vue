@@ -23,9 +23,6 @@ import Container from "@/components/utils/Container.vue";
 import H1 from "@/components/utils/html/H1.vue";
 import Input from "@/components/utils/html/Input.vue";
 import Button from "@/components/utils/html/Button.vue";
-import TrackInList from "@/components/utils/TrackInList.vue";
-import TracksContainer from "@/components/utils/TracksContainer.vue";
-import Tag from "@/components/utils/Tag.vue";
 export default {
 	name: "Home",
 	components: {
@@ -33,9 +30,6 @@ export default {
 		H1,
 		Input,
 		Button,
-		TrackInList,
-		TracksContainer,
-		Tag,
 	},
 	data() {
 		return {
