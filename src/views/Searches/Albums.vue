@@ -2,7 +2,7 @@
 	<div>
 		<Container>
 			<Loading :loading="loading" />
-			<NotFound :found="found" :query="search_query" />
+			<NotFound :found="found" :query="$route.params.search_query" />
 			<SearchResults :data_to_grid="albums"></SearchResults>
 		</Container>
 	</div>
