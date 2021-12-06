@@ -68,6 +68,12 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "search" */ "../views/Artist/ArtistPage.vue"),
 	},
+	{
+		path: "/album/:album_id",
+		name: "AlbumPage",
+		component: () =>
+			import(/* webpackChunkName: "search" */ "../views/Album/AlbumPage.vue"),
+	},
 ];
 
 const router = createRouter({

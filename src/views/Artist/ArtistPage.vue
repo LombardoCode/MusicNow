@@ -1,5 +1,5 @@
 <template>
-	<Container>
+	<Container v-if="found">
 		<div id="picture-name-fans" class="flex items-center">
 			<div id="picture">
 				<img

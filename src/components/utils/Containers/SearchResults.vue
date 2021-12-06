@@ -19,13 +19,13 @@
 			</div>
 		</GridContainer>
 		<div v-else>
-			<TracksContainer v-if="data_to_grid[0].type == 'track'">
-				<TrackListItem
+			<TracksContainerFromSearch v-if="data_to_grid[0].type == 'track'">
+				<TrackInSearch
 					v-for="(data, index) in data_to_grid"
 					:key="index"
 					:item="data"
-				></TrackListItem>
-			</TracksContainer>
+				></TrackInSearch>
+			</TracksContainerFromSearch>
 		</div>
 		<slot></slot>
 	</div>
@@ -33,8 +33,8 @@
 
 <script>
 import GridContainer from "@/components/utils/Containers/GridContainer.vue";
-import TracksContainer from "@/components/utils/Containers/TracksContainer.vue";
-import TrackListItem from "@/components/utils/Containers/ListItems/Track.vue";
+import TracksContainerFromSearch from "@/components/utils/Containers/Tables/TracksContainerFromSearch.vue";
+import TrackInSearch from "@/components/utils/Containers/ListItems/TrackInSearch.vue";
 import PlaylistGridItem from "@/components/utils/Containers/GridItems/Playlist.vue";
 import AlbumGridItem from "@/components/utils/Containers/GridItems/Album.vue";
 import ArtistGridItem from "@/components/utils/Containers/GridItems/Artist.vue";
@@ -46,8 +46,8 @@ export default {
 	},
 	components: {
 		GridContainer,
-		TracksContainer,
-		TrackListItem,
+		TracksContainerFromSearch,
+		TrackInSearch,
 		PlaylistGridItem,
 		AlbumGridItem,
 		ArtistGridItem,

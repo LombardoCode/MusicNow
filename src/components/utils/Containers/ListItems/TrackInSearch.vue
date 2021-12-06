@@ -1,20 +1,20 @@
 <template>
 	<tr class="mt-5 mb-10 hover:bg-gray-800 duration-200 cursor-pointer">
-		<td class="py-2 px-2" @click="selectTrack()">
+		<td class="py-2 px-2" @click="selectTrack()" v-if="item.album">
 			<img :src="item.album.cover_xl" alt="" class="w-10 h-full mr-3" />
 		</td>
 		<td class="py-2 px-2" @click="selectTrack()">
 			<P class="font-bold">{{ item.title }}</P>
 		</td>
 
-		<td class="py-2 px-2 hover:underline">
+		<td class="py-2 px-2 hover:underline" v-if="item.artist">
 			<RouterLink
 				:to="{ name: 'ArtistPage', params: { artist_id: item.artist.id } }"
 				>{{ item.artist.name }}</RouterLink
 			>
 		</td>
 
-		<td class="py-2 px-2">
+		<td class="py-2 px-2" v-if="item.album">
 			<P>{{ item.album.title }}</P>
 		</td>
 	</tr>
@@ -33,6 +33,9 @@ export default {
 		selectTrack() {
 			this.emitter.emit("trackSelected", this.item);
 		},
+	},
+	mounted() {
+		console.log(this.item);
 	},
 };
 </script>
