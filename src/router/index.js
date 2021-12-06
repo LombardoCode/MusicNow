@@ -63,16 +63,24 @@ const routes = [
 		],
 	},
 	{
-		path: "/artist/:artist_id",
-		name: "ArtistPage",
+		path: "/playlist/:playlist_id",
+		name: "PlaylistPage",
 		component: () =>
-			import(/* webpackChunkName: "search" */ "../views/Artist/ArtistPage.vue"),
+			import(
+				/* webpackChunkName: "search" */ "../views/Playlist/PlaylistPage.vue"
+			),
 	},
 	{
 		path: "/album/:album_id",
 		name: "AlbumPage",
 		component: () =>
 			import(/* webpackChunkName: "search" */ "../views/Album/AlbumPage.vue"),
+	},
+	{
+		path: "/artist/:artist_id",
+		name: "ArtistPage",
+		component: () =>
+			import(/* webpackChunkName: "search" */ "../views/Artist/ArtistPage.vue"),
 	},
 ];
 

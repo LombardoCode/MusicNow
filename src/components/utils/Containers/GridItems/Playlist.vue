@@ -1,5 +1,8 @@
 <template>
-	<div class="mt-5 mb-10 hover:bg-gray-800 duration-200 cursor-pointer py-2">
+	<div
+		class="mt-5 mb-10 hover:bg-gray-800 duration-200 cursor-pointer py-2"
+		@click="selectPlaylist()"
+	>
 		<div class="py-2 px-5">
 			<img :src="item.picture_medium" alt="" class="w-full rounded-xl" />
 		</div>
@@ -24,8 +27,11 @@ export default {
 		PSmall,
 	},
 	methods: {
-		selectTrack() {
-			this.emitter.emit("trackSelected", this.track);
+		selectPlaylist() {
+			this.$router.push({
+				name: "PlaylistPage",
+				params: { playlist_id: this.item.id },
+			});
 		},
 	},
 };
