@@ -1,6 +1,6 @@
 <template>
 	<Container>
-		<H1 txt="¿Qué vamos a escuchar hoy?" class="text-center mt-5"></H1>
+		<H1 class="text-center mt-5">¿Qué vamos a escuchar hoy?</H1>
 		<div class="flex flex-col md:flex-row md:justify-center text-center mt-6">
 			<Input
 				type="text"

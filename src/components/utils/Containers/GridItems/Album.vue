@@ -6,7 +6,7 @@
 		<div class="px-5">
 			<P>{{ item.title }}</P>
 		</div>
-		<div class="px-5">
+		<div class="px-5" v-if="item.artist">
 			<PSmall>De {{ item.artist.name }}</PSmall>
 		</div>
 	</div>

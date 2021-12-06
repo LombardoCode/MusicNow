@@ -7,8 +7,11 @@
 			<P class="font-bold">{{ item.title }}</P>
 		</td>
 
-		<td class="py-2 px-2">
-			<P>{{ item.artist.name }}</P>
+		<td class="py-2 px-2 hover:underline">
+			<RouterLink
+				:to="{ name: 'ArtistPage', params: { artist_id: item.artist.id } }"
+				>{{ item.artist.name }}</RouterLink
+			>
 		</td>
 
 		<td class="py-2 px-2">

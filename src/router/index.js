@@ -62,6 +62,12 @@ const routes = [
 			},
 		],
 	},
+	{
+		path: "/artist/:artist_id",
+		name: "ArtistPage",
+		component: () =>
+			import(/* webpackChunkName: "search" */ "../views/Artist/ArtistPage.vue"),
+	},
 ];
 
 const router = createRouter({
