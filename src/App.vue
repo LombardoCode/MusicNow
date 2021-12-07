@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import navbar from "@/components/Navbar.vue";
-import Player from "@/components/utils/Player.vue";
+import navbar from "@/components/utils/UI/Navbar.vue";
+import Player from "@/components/utils/UI/Player.vue";
 export default {
 	name: "App",
 	components: {

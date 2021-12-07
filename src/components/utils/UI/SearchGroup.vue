@@ -13,7 +13,6 @@
 				<Tag name="SearchPlaylist">Playlists</Tag>
 				<Tag name="SearchAlbum">Albumes</Tag>
 				<Tag name="SearchArtist">Artistas</Tag>
-				<Tag name="SearchUser">Usuarios</Tag>
 			</TagContainer>
 		</Container>
 		<router-view></router-view>
@@ -21,10 +20,10 @@
 </template>
 
 <script>
-import Container from "@/components/utils/Container.vue";
+import Container from "@/components/utils/Containers/Container.vue";
 import InputSearch from "@/components/utils/html/InputSearch.vue";
-import TagContainer from "@/components/utils/TagContainer";
-import Tag from "@/components/utils/Tag";
+import TagContainer from "@/components/utils/Containers/TagContainer.vue";
+import Tag from "@/components/utils/UI/Tag.vue";
 export default {
 	components: {
 		Container,

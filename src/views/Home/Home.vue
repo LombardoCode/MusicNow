@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Container from "@/components/utils/Container.vue";
+import Container from "@/components/utils/Containers/Container.vue";
 import H1 from "@/components/utils/html/H1.vue";
 import Input from "@/components/utils/html/Input.vue";
 import Button from "@/components/utils/html/Button.vue";

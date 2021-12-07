@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Link from "@/components/utils/Link.vue";
+import Link from "@/components/utils/UI/Link.vue";
 export default {
 	components: {
 		Link,

@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import getArtistById from "@/mixins/getArtistById.js";
-import getArtistsAlbumsByArtistsId from "@/mixins/getArtistsAlbumsByArtistsId.js";
-import Container from "@/components/utils/Container.vue";
+import getArtistById from "@/mixins/Artist/getArtistById.js";
+import getArtistsAlbumsByArtistsId from "@/mixins/Artist/getArtistsAlbumsByArtistsId.js";
+import Container from "@/components/utils/Containers/Container.vue";
 import GridContainer from "@/components/utils/Containers/GridContainer.vue";
 import GridItemAlbum from "@/components/utils/Containers/GridItems/Album.vue";
 import H1 from "@/components/utils/html/H1.vue";

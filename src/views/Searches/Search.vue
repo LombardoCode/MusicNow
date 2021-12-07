@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import Container from "@/components/utils/Container.vue";
+import Container from "@/components/utils/Containers/Container.vue";
 import Loading from "@/components/utils/UI/Loading.vue";
 import NotFound from "@/components/utils/UI/NotFound.vue";
-import SearchResults from "@/components/utils/Containers/SearchResults.vue";
-import getResults from "@/mixins/getResults.js";
+import SearchResults from "@/components/utils/UI/SearchResults.vue";
+import getResults from "@/mixins/Search/getResults.js";
 export default {
 	components: {
 		Container,

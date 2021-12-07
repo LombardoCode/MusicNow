@@ -4,14 +4,17 @@ const routes = [
 	{
 		path: "/",
 		name: "Home",
-		component: () => import(/* webpackChunkName: "home" */ "../views/Home.vue"),
+		component: () =>
+			import(/* webpackChunkName: "home" */ "../views/Home/Home.vue"),
 	},
 	{
 		path: "/search/:search_query",
 		name: "Search",
 		props: true,
 		component: () =>
-			import(/* webpackChunkName: "search" */ "../components/utils/Router.vue"),
+			import(
+				/* webpackChunkName: "search" */ "../components/utils/UI/SearchGroup.vue"
+			),
 		children: [
 			{
 				path: "",
@@ -45,12 +48,6 @@ const routes = [
 					import(
 						/* webpackChunkN434ame: "search" */ "../views/Searches/Artists.vue"
 					),
-			},
-			{
-				path: "users",
-				name: "SearchUser",
-				component: () =>
-					import(/* webpackChunkName: "search" */ "../views/Searches/User.vue"),
 			},
 		],
 	},
