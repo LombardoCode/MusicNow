@@ -15,8 +15,11 @@
 			>
 		</td>
 
-		<td class="py-2 px-2" @click="selectTrack()">
-			<P class="font-bold">{{ item.album.title }}</P>
+		<td class="py-2 px-2 hover:underline" @click="selectTrack()">
+			<RouterLink
+				:to="{ name: 'AlbumPage', params: { album_id: item.album.id } }"
+				>{{ item.album.title }}</RouterLink
+			>
 		</td>
 
 		<td class="py-2 px-2" @click="selectTrack()">

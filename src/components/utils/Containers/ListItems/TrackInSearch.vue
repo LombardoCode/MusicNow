@@ -14,8 +14,11 @@
 			>
 		</td>
 
-		<td class="py-2 px-2" v-if="item.album">
-			<P>{{ item.album.title }}</P>
+		<td class="py-2 px-2 hover:underline" v-if="item.album">
+			<RouterLink
+				:to="{ name: 'AlbumPage', params: { album_id: item.album.id } }"
+				>{{ item.album.title }}</RouterLink
+			>
 		</td>
 	</tr>
 </template>
