@@ -1,5 +1,8 @@
 <template>
-	<div class="mt-5 mb-10 hover:bg-gray-800 duration-200 cursor-pointer py-2">
+	<div
+		class="mt-5 mb-10 hover:bg-gray-800 duration-200 cursor-pointer py-2"
+		@click="selectArtist()"
+	>
 		<div class="py-2 px-5">
 			<img :src="item.picture_xl" alt="" class="w-full rounded-full" />
 		</div>
@@ -24,8 +27,11 @@ export default {
 		PSmall,
 	},
 	methods: {
-		selectTrack() {
-			this.emitter.emit("trackSelected", this.track);
+		selectArtist() {
+			this.$router.push({
+				name: "ArtistPage",
+				params: { artist_id: this.item.id },
+			});
 		},
 		formatNumber(amount) {
 			const nf = Intl.NumberFormat();

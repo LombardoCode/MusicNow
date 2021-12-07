@@ -47,14 +47,6 @@ const routes = [
 					),
 			},
 			{
-				path: "podcast",
-				name: "SearchPodcast",
-				component: () =>
-					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Podcasts.vue"
-					),
-			},
-			{
 				path: "users",
 				name: "SearchUser",
 				component: () =>

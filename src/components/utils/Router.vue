@@ -13,7 +13,6 @@
 				<Tag name="SearchPlaylist">Playlists</Tag>
 				<Tag name="SearchAlbum">Albumes</Tag>
 				<Tag name="SearchArtist">Artistas</Tag>
-				<Tag name="SearchPodcast">Podcasts</Tag>
 				<Tag name="SearchUser">Usuarios</Tag>
 			</TagContainer>
 		</Container>

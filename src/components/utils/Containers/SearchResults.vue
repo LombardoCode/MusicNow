@@ -38,7 +38,6 @@ import TrackInSearch from "@/components/utils/Containers/ListItems/TrackInSearch
 import PlaylistGridItem from "@/components/utils/Containers/GridItems/Playlist.vue";
 import AlbumGridItem from "@/components/utils/Containers/GridItems/Album.vue";
 import ArtistGridItem from "@/components/utils/Containers/GridItems/Artist.vue";
-import PodcastGridItem from "@/components/utils/Containers/GridItems/Podcast.vue";
 import UserGridItem from "@/components/utils/Containers/GridItems/User.vue";
 export default {
 	props: {
@@ -51,7 +50,6 @@ export default {
 		PlaylistGridItem,
 		AlbumGridItem,
 		ArtistGridItem,
-		PodcastGridItem,
 		UserGridItem,
 	},
 };
