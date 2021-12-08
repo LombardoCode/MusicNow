@@ -1,6 +1,7 @@
 <template>
 	<tr class="mt-5 mb-10 hover:bg-gray-800 duration-200 cursor-pointer">
 		<td class="py-2 px-2" @click="selectTrack()" v-if="item.album">
+			<P class="font-bold">{{ key }}</P>
 			<img :src="item.album.cover_xl" alt="" class="w-10 h-full mr-3" />
 		</td>
 
@@ -35,6 +36,7 @@ export default {
 	mixins: [formatTrackDuration],
 	props: {
 		item: Object,
+		key: Number,
 	},
 	components: {
 		P,

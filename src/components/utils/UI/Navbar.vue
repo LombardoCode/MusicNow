@@ -1,14 +1,12 @@
 <template>
-	<div class="w-full bg-black text-white">
-		<div class="container mx-auto flex justify-between items-center py-3">
+	<div class="w-full text-white">
+		<div class="container mx-auto flex justify-between items-center py-4">
 			<div>
 				<Link to="/" txt="MusicNow" />
 			</div>
 			<nav>
-				<ul>
-					<li>
-						<Link to="/" txt="Inicio" />
-					</li>
+				<ul class="flex">
+					<li><Link to="/acerca" txt="Acerca de" /></li>
 				</ul>
 			</nav>
 		</div>

@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="player fixed w-full h-28 bg-gray-800 text-white bottom-0"
+		class="player fixed w-full h-24 text-white bottom-0 border-t-2 border-gray-600"
 		v-if="trackSelected != null"
 	>
 		<div
@@ -36,4 +36,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.player {
+	background-color: #1c1c24;
+}
+</style>

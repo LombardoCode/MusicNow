@@ -1,6 +1,6 @@
 <template>
 	<div class="tracks-container text-white mt-4">
-		<table>
+		<table class="w-full">
 			<thead>
 				<tr class="text-left">
 					<th class="py-2"></th>
@@ -14,7 +14,6 @@
 				<slot></slot>
 			</tbody>
 		</table>
-		<slot></slot>
 	</div>
 </template>
 
