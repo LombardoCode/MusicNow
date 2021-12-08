@@ -12,7 +12,10 @@
 				</div>
 				<div id="name-fans" class="ml-8">
 					<H1 class="mb-2">{{ playlist.info.title }}</H1>
-					<PSmall>Fans: {{ playlist.info.fans }}</PSmall>
+					<PSmall
+						>Fans:
+						{{ this.formatNumberToThousands(playlist.info.fans) }}</PSmall
+					>
 				</div>
 			</div>
 			<div id="tracks" class="my-10">
@@ -32,6 +35,7 @@
 <script>
 import getPlaylistById from "@/mixins/Playlist/getPlaylistById.js";
 import getTracksByPlaylistId from "@/mixins/Playlist/getTracksByPlaylistId.js";
+import formatNumberToThousands from "@/mixins/General/Numbers/formatNumberToThousands.js";
 import Loading from "@/components/utils/UI/Loading.vue";
 import Container from "@/components/utils/Containers/Container.vue";
 import TracksContainerFromPlaylist from "@/components/utils/Containers/Tables/TracksContainerFromPlaylist.vue";
@@ -40,7 +44,7 @@ import H1 from "@/components/utils/html/H1.vue";
 import H3 from "@/components/utils/html/H3.vue";
 import PSmall from "@/components/utils/html/PSmall.vue";
 export default {
-	mixins: [getPlaylistById, getTracksByPlaylistId],
+	mixins: [getPlaylistById, getTracksByPlaylistId, formatNumberToThousands],
 	components: {
 		Loading,
 		Container,

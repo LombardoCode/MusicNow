@@ -1,20 +1,18 @@
 <template>
 	<Container>
 		<H1 class="text-center mt-5">¿Qué vamos a escuchar hoy?</H1>
-		<div class="flex flex-col md:flex-row md:justify-center text-center mt-6">
+		<form
+			class="flex flex-col md:flex-row md:justify-center text-center mt-6"
+			@submit.prevent="searchResults()"
+		>
 			<Input
 				type="text"
 				name="query_text"
 				placeholder="Búsqueda de canciones"
-				v-on:keyup.enter="search()"
 				v-model="search_query"
 			/>
-			<Button
-				class="mt-2 md:mt-0 md:ml-2"
-				txt="Buscar"
-				@click="search()"
-			></Button>
-		</div>
+			<Button class="mt-2 md:mt-0 md:ml-2" txt="Buscar"></Button>
+		</form>
 	</Container>
 </template>
 
@@ -39,7 +37,7 @@ export default {
 		};
 	},
 	methods: {
-		async search() {
+		async searchResults() {
 			this.$router.push({
 				name: "SearchSong",
 				params: {

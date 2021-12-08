@@ -7,6 +7,7 @@
 					<th class="py-2">Canción</th>
 					<th class="py-2">Artista</th>
 					<th class="py-2">Album</th>
+					<th class="py-2">Duración</th>
 				</tr>
 			</thead>
 			<tbody>

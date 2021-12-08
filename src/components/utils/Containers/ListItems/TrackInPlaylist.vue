@@ -23,21 +23,24 @@
 		</td>
 
 		<td class="py-2 px-2" @click="selectTrack()">
-			<P class="font-bold">{{ item.time_add }}</P>
+			<P class="font-bold">{{ this.formatUnixToDate(item.time_add) }}</P>
 		</td>
 
 		<td class="py-2 px-2" @click="selectTrack()">
-			<P class="font-bold">{{ item.duration }}</P>
+			<P class="font-bold">{{ this.formatTrackDuration(item.duration) }}</P>
 		</td>
 	</tr>
 </template>
 
 <script>
 import P from "@/components/utils/html/P.vue";
+import formatTrackDuration from "@/mixins/General/Numbers/formatTrackDuration.js";
+import formatUnixToDate from "@/mixins/General/Numbers/formatUnixToDate.js";
 export default {
 	props: {
 		item: Object,
 	},
+	mixins: [formatTrackDuration, formatUnixToDate],
 	components: {
 		P,
 	},

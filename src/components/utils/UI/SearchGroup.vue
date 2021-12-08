@@ -33,7 +33,7 @@ export default {
 	},
 	data() {
 		return {
-			search_query: "",
+			search_query: this.$route.params.search_query,
 		};
 	},
 	methods: {

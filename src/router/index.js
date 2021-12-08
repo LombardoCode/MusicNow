@@ -5,7 +5,7 @@ const routes = [
 		path: "/",
 		name: "Home",
 		component: () =>
-			import(/* webpackChunkName: "home" */ "../views/Home/Home.vue"),
+			import(/* webpackChunkName: "Home" */ "../views/Home/Home.vue"),
 	},
 	{
 		path: "/search/:search_query",
@@ -13,7 +13,7 @@ const routes = [
 		props: true,
 		component: () =>
 			import(
-				/* webpackChunkName: "search" */ "../components/utils/UI/SearchGroup.vue"
+				/* webpackChunkName: "Search" */ "../components/utils/UI/SearchGroup.vue"
 			),
 		children: [
 			{
@@ -21,7 +21,7 @@ const routes = [
 				name: "SearchSong",
 				component: () =>
 					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Search.vue"
+						/* webpackChunkName: "SearchSong" */ "../views/Searches/Search.vue"
 					),
 			},
 			{
@@ -30,7 +30,7 @@ const routes = [
 				props: true,
 				component: () =>
 					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Playlists.vue"
+						/* webpackChunkName: "SearchPlaylist" */ "../views/Searches/Playlists.vue"
 					),
 			},
 			{
@@ -38,7 +38,7 @@ const routes = [
 				name: "SearchAlbum",
 				component: () =>
 					import(
-						/* webpackChunkName: "search" */ "../views/Searches/Albums.vue"
+						/* webpackChunkName: "SearchAlbum" */ "../views/Searches/Albums.vue"
 					),
 			},
 			{
@@ -46,7 +46,7 @@ const routes = [
 				name: "SearchArtist",
 				component: () =>
 					import(
-						/* webpackChunkN434ame: "search" */ "../views/Searches/Artists.vue"
+						/* webpackChunkN434ame: "SearchArtist" */ "../views/Searches/Artists.vue"
 					),
 			},
 		],
@@ -56,20 +56,24 @@ const routes = [
 		name: "PlaylistPage",
 		component: () =>
 			import(
-				/* webpackChunkName: "search" */ "../views/Playlist/PlaylistPage.vue"
+				/* webpackChunkName: "PlaylistPage" */ "../views/Playlist/PlaylistPage.vue"
 			),
 	},
 	{
 		path: "/album/:album_id",
 		name: "AlbumPage",
 		component: () =>
-			import(/* webpackChunkName: "search" */ "../views/Album/AlbumPage.vue"),
+			import(
+				/* webpackChunkName: "AlbumPage" */ "../views/Album/AlbumPage.vue"
+			),
 	},
 	{
 		path: "/artist/:artist_id",
 		name: "ArtistPage",
 		component: () =>
-			import(/* webpackChunkName: "search" */ "../views/Artist/ArtistPage.vue"),
+			import(
+				/* webpackChunkName: "ArtistPage" */ "../views/Artist/ArtistPage.vue"
+			),
 	},
 ];
 

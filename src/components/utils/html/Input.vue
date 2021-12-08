@@ -4,7 +4,7 @@
 		:name="name"
 		:id="id"
 		:placeholder="placeholder"
-		class="w-full md:w-3/4 lg:w-3/4 border-2 border-blue-500 px-4 py-2 outline-none focus:border-blue-700 duration-200 placeholder-gray-400 text-gray-800"
+		class="w-full md:w-3/4 lg:w-3/4 border-2 focus:border-red-500 outline-none px-4 py-2 duration-200 placeholder-gray-400 text-gray-800"
 		v-model="input_text"
 	/>
 </template>

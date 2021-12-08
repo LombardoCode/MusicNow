@@ -3,6 +3,7 @@
 		<td class="py-2 px-2" @click="selectTrack()" v-if="item.album">
 			<img :src="item.album.cover_xl" alt="" class="w-10 h-full mr-3" />
 		</td>
+
 		<td class="py-2 px-2" @click="selectTrack()">
 			<P class="font-bold">{{ item.title }}</P>
 		</td>
@@ -20,12 +21,18 @@
 				>{{ item.album.title }}</RouterLink
 			>
 		</td>
+
+		<td class="py-2 px-2" @click="selectTrack()">
+			<P class="font-bold">{{ this.formatTrackDuration(item.duration) }}</P>
+		</td>
 	</tr>
 </template>
 
 <script>
+import formatTrackDuration from "@/mixins/General/Numbers/formatTrackDuration.js";
 import P from "@/components/utils/html/P.vue";
 export default {
+	mixins: [formatTrackDuration],
 	props: {
 		item: Object,
 	},
