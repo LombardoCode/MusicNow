@@ -1,5 +1,5 @@
 <template>
-	<div class="tracks-container text-white mt-4">
+	<div class="tracks-container text-white mt-4 mb-44">
 		<table class="w-full">
 			<thead>
 				<tr class="text-left">
@@ -15,7 +15,6 @@
 				<slot></slot>
 			</tbody>
 		</table>
-		<slot></slot>
 	</div>
 </template>
 
