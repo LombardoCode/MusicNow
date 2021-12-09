@@ -46,9 +46,6 @@ export default {
 			this.emitter.emit("trackSelected", this.item);
 		},
 	},
-	mounted() {
-		console.log(this.item);
-	},
 };
 </script>
 

@@ -70,7 +70,6 @@ export default {
 	methods: {
 		async getAlbumInfo(baseUrl, album_id) {
 			const data = await this.getAlbumById(baseUrl, album_id);
-			console.log(data);
 			if (!data) {
 				this.found = false;
 			} else {
@@ -82,7 +81,6 @@ export default {
 		},
 		async getTracksFromAlbum(baseUrl, album_id) {
 			const data = await this.getTracksByAlbumId(baseUrl, album_id);
-			console.log(data);
 			if (!data) {
 				this.found = false;
 			} else {

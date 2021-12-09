@@ -71,15 +71,12 @@ export default {
 				this.artist.info = data;
 				this.getArtistsAlbums(baseUrl, artist_id);
 			}
-
-			console.log(data);
 		},
 		async getArtistsAlbums(baseUrl, artist_id) {
 			const data = await this.getArtistsAlbumsByArtistsId(baseUrl, artist_id);
 			if (!data) {
 				this.found = false;
 			} else {
-				console.log(data);
 				this.artist.albums = data;
 			}
 		},

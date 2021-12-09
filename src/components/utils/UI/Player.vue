@@ -25,7 +25,6 @@ export default {
 		this.emitter.on("trackSelected", async (trackSelected) => {
 			this.trackSelected = await null;
 			this.trackSelected = await trackSelected;
-			console.log(this.trackSelected);
 		});
 	},
 	data() {
