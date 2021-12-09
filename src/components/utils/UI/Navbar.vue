@@ -6,7 +6,8 @@
 			</div>
 			<nav>
 				<ul class="flex">
-					<li><Link to="/acerca" txt="Acerca de" /></li>
+					<li><Link to="/" txt="Inicio" /></li>
+					<li><Link to="/about" txt="Acerca de" /></li>
 				</ul>
 			</nav>
 		</div>
