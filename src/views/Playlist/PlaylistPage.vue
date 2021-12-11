@@ -55,13 +55,12 @@ export default {
 		PSmall,
 	},
 	mounted() {
-		this.getPlaylistInfo(this.baseUrl, this.$route.params.playlist_id);
+		this.getPlaylistInfo(this.$route.params.playlist_id);
 	},
 	data() {
 		return {
 			loading: true,
 			found: true,
-			baseUrl: process.env.VUE_APP_CLIENT,
 			playlist: {
 				info: {},
 				tracks: [],
@@ -69,19 +68,19 @@ export default {
 		};
 	},
 	methods: {
-		async getPlaylistInfo(baseUrl, playlist_id) {
-			const data = await this.getPlaylistById(baseUrl, playlist_id);
+		async getPlaylistInfo(playlist_id) {
+			const data = await this.getPlaylistById(playlist_id);
 			if (!data) {
 				this.found = false;
 			} else {
 				this.playlist.info = await data;
 				this.found = true;
 				this.loading = false;
-				this.getTracksFromPlaylist(baseUrl, playlist_id);
+				this.getTracksFromPlaylist(playlist_id);
 			}
 		},
-		async getTracksFromPlaylist(baseUrl, playlist_id) {
-			const data = await this.getTracksByPlaylistId(baseUrl, playlist_id);
+		async getTracksFromPlaylist(playlist_id) {
+			const data = await this.getTracksByPlaylistId(playlist_id);
 			if (!data) {
 				this.found = false;
 			} else {

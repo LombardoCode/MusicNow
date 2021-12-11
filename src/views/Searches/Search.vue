@@ -38,7 +38,6 @@ export default {
 		return {
 			loading: true,
 			found: true,
-			baseUrl: process.env.VUE_APP_CLIENT,
 			type: "track",
 			search_query: this.$route.params.search_query,
 			tracks: [],
@@ -48,11 +47,7 @@ export default {
 		async search(search_query = this.search_query) {
 			this.loading = true;
 			this.found = true;
-			this.tracks = await this.getResults(
-				this.baseUrl,
-				this.type,
-				search_query
-			);
+			this.tracks = await this.getResults(this.type, search_query);
 			this.found = this.tracks.length > 0 ? true : false;
 			this.loading = false;
 		},

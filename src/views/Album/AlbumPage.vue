@@ -54,13 +54,12 @@ export default {
 		PSmall,
 	},
 	mounted() {
-		this.getAlbumInfo(this.baseUrl, this.$route.params.album_id);
+		this.getAlbumInfo(this.$route.params.album_id);
 	},
 	data() {
 		return {
 			loading: true,
 			found: true,
-			baseUrl: process.env.VUE_APP_CLIENT,
 			album: {
 				info: {},
 				tracks: [],
@@ -68,19 +67,19 @@ export default {
 		};
 	},
 	methods: {
-		async getAlbumInfo(baseUrl, album_id) {
-			const data = await this.getAlbumById(baseUrl, album_id);
+		async getAlbumInfo(album_id) {
+			const data = await this.getAlbumById(album_id);
 			if (!data) {
 				this.found = false;
 			} else {
 				this.album.info = await data;
 				this.found = true;
 				this.loading = false;
-				this.getTracksFromAlbum(baseUrl, album_id);
+				this.getTracksFromAlbum(album_id);
 			}
 		},
-		async getTracksFromAlbum(baseUrl, album_id) {
-			const data = await this.getTracksByAlbumId(baseUrl, album_id);
+		async getTracksFromAlbum(album_id) {
+			const data = await this.getTracksByAlbumId(album_id);
 			if (!data) {
 				this.found = false;
 			} else {

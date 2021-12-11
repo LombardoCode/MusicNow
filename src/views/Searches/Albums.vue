@@ -38,7 +38,6 @@ export default {
 		return {
 			loading: true,
 			found: true,
-			baseUrl: process.env.VUE_APP_CLIENT,
 			type: "album",
 			search_query: this.$route.params.search_query,
 			albums: [],
@@ -48,11 +47,7 @@ export default {
 		async search(search_query = this.search_query) {
 			this.loading = true;
 			this.found = true;
-			this.albums = await this.getResults(
-				this.baseUrl,
-				this.type,
-				search_query
-			);
+			this.albums = await this.getResults(this.type, search_query);
 			this.found = this.albums.length > 0 ? true : false;
 			this.loading = false;
 		},

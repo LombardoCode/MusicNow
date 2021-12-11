@@ -2,9 +2,16 @@ import axios from "axios";
 
 export default {
 	methods: {
-		getArtistById(base_url, id) {
+		getArtistById(id) {
+			const url = process.env.VUE_APP_SERVER_URL + "/artist/" + id;
+			const options = {
+				headers: {
+					'x-rapidapi-host': process.env.VUE_APP_X_RAPIDAPI_HOST,
+					'x-rapidapi-key': process.env.VUE_APP_X_RAPIDAPI_KEY
+				}
+			};
 			return axios
-				.get(base_url + "/artist/" + id)
+				.get(url, options)
 				.then((res) => {
 					return res.data;
 				})

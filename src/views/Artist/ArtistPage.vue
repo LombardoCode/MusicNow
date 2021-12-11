@@ -49,13 +49,12 @@ export default {
 		PSmall,
 	},
 	mounted() {
-		this.getArtistInfo(this.baseUrl, this.$route.params.artist_id);
+		this.getArtistInfo(this.$route.params.artist_id);
 	},
 	data() {
 		return {
 			loading: true,
 			found: true,
-			baseUrl: process.env.VUE_APP_CLIENT,
 			artist: {
 				info: {},
 				albums: {},
@@ -63,17 +62,17 @@ export default {
 		};
 	},
 	methods: {
-		async getArtistInfo(baseUrl, artist_id) {
-			const data = await this.getArtistById(baseUrl, artist_id);
+		async getArtistInfo(artist_id) {
+			const data = await this.getArtistById(artist_id);
 			if (!data) {
 				this.found = false;
 			} else {
 				this.artist.info = data;
-				this.getArtistsAlbums(baseUrl, artist_id);
+				this.getArtistsAlbums(artist_id);
 			}
 		},
-		async getArtistsAlbums(baseUrl, artist_id) {
-			const data = await this.getArtistsAlbumsByArtistsId(baseUrl, artist_id);
+		async getArtistsAlbums(artist_id) {
+			const data = await this.getArtistsAlbumsByArtistsId(artist_id);
 			if (!data) {
 				this.found = false;
 			} else {
