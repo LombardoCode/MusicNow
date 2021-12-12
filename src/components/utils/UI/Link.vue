@@ -1,7 +1,7 @@
 <template>
 	<router-link
 		:to="to"
-		class="py-2 px-4 ml-2 hover:bg-white hover:text-black rounded-full transition-all duration-200 cursor-pointer"
+		class="inline-block w-full md:w-auto text-center md:text-left py-4 md:py-2 px-4 md:ml-2 my-3 md:my-0 md:mb-0 hover:bg-white hover:text-black rounded-full transition-all duration-200 cursor-pointer"
 	>
 		{{ txt }}
 	</router-link>

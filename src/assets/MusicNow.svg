@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="159.72557mm"
+   height="32.489704mm"
+   viewBox="0 0 159.72557 32.489704"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="MusicNow.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.2953002"
+     inkscape:cx="281.40194"
+     inkscape:cy="150.54425"
+     inkscape:window-width="1898"
+     inkscape:window-height="1033"
+     inkscape:window-x="9"
+     inkscape:window-y="9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2">
+    <rect
+       x="79.169556"
+       y="255.66342"
+       width="614.85828"
+       height="191.05659"
+       id="rect4125" />
+    <rect
+       x="79.169556"
+       y="255.66342"
+       width="614.85828"
+       height="191.05659"
+       id="rect38563" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Fondo"
+     style="display:none"
+     transform="translate(-18.783209,-47.678282)"
+     sodipodi:insensitive="true">
+    <rect
+       id="rect20747"
+       width="357.11349"
+       height="239.54161"
+       x="-115.70706"
+       y="-2.8934464"
+       style="fill:#000000;stroke-width:0.264583" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Logo"
+     style="display:inline"
+     transform="translate(-18.783209,-47.678282)">
+    <g
+       inkscape:label="Subtext"
+       inkscape:groupmode="layer"
+       id="g38561"
+       style="display:none">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,36.924441,3.2204692)"
+         id="text38559"
+         style="font-style:normal;font-weight:normal;font-size:32px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect38563);fill:#000000;fill-opacity:1;stroke:none"><tspan
+           x="79.169922"
+           y="285.00806"
+           id="tspan865"><tspan
+             style="font-weight:300;font-family:'Mabry Pro';-inkscape-font-specification:'Mabry Pro Light';fill:#ffffff"
+             id="tspan863">API by Deezer</tspan></tspan></text>
+    </g>
+    <g
+       inkscape:label="Text"
+       inkscape:groupmode="layer"
+       id="layer1"
+       style="display:inline">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,35.336941,-18.250115)"
+         id="text4123"
+         style="font-style:normal;font-weight:normal;font-size:96px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4125);fill:#000000;fill-opacity:1;stroke:none"><tspan
+           x="79.169922"
+           y="343.69606"
+           id="tspan871"><tspan
+             style="font-weight:500;font-family:'Mabry Pro';-inkscape-font-specification:'Mabry Pro Medium';fill:#ffffff"
+             id="tspan867">Music</tspan><tspan
+             style="font-weight:500;font-family:'Mabry Pro';-inkscape-font-specification:'Mabry Pro Medium';fill:#ff2a2a"
+             id="tspan869">Now</tspan></tspan></text>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g44707"
+       inkscape:label="Play copia">
+      <circle
+         style="fill:#ff2a2a;stroke-width:0.203598"
+         id="circle44703"
+         cx="35.028061"
+         cy="63.923134"
+         r="16.244852" />
+      <path
+         sodipodi:type="star"
+         style="fill:#ffffff"
+         id="path44705"
+         inkscape:flatsided="true"
+         sodipodi:sides="3"
+         sodipodi:cx="-350.48502"
+         sodipodi:cy="248.66794"
+         sodipodi:r1="44.954681"
+         sodipodi:r2="22.477341"
+         sodipodi:arg1="0"
+         sodipodi:arg2="1.0471976"
+         inkscape:rounded="0"
+         inkscape:randomized="0"
+         d="m -305.53033,248.66794 -67.43203,38.93189 v -77.86379 z"
+         transform="matrix(0.20359828,0,0,0.20359828,106.13402,13.294769)"
+         inkscape:transform-center-x="-2.2881742" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Play"
+     sodipodi:insensitive="true"
+     style="display:none"
+     transform="translate(-18.783209,-47.678282)">
+    <circle
+       style="fill:#ff2a2a;stroke-width:0.264583"
+       id="path36014"
+       cx="-6.5833406"
+       cy="81.340172"
+       r="21.110773" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff"
+       id="path36120"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="-350.48502"
+       sodipodi:cy="248.66794"
+       sodipodi:r1="44.954681"
+       sodipodi:r2="22.477341"
+       sodipodi:arg1="0"
+       sodipodi:arg2="1.0471976"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -305.53033,248.66794 -67.43203,38.93189 v -77.86379 z"
+       transform="matrix(0.26458333,0,0,0.26458333,85.821423,15.546779)"
+       inkscape:transform-center-x="-2.9735659" />
+  </g>
+</svg>
