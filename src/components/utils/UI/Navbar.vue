@@ -10,7 +10,7 @@
 						<i class="fas fa-bars"></i>
 					</div>
 				</div>
-				<nav id="navbar" class="md:block" :class="{'h-0 collapseClosed': !menuToggled, 'h-full collapseOpened block': menuToggled}">
+				<nav id="navbar" class="transform md:block" :class="{'h-0 md:h-auto scale-y-0 md:scale-y-100': !menuToggled, 'h-full scale-y-100 block': menuToggled}">
 					<ul class="flex flex-col md:flex-row">
 						<li><Link to="/" txt="Inicio" /></li>
 						<li><Link to="/about" txt="Acerca de" /></li>
@@ -45,13 +45,5 @@ export default {
 	#navbar {
 		transition: transform 0.16s ease-out;
 		transform-origin: top;
-	}
-
-	.collapseClosed {
-		transform: scaleY(0);
-	}
-
-	.collapseOpened {
-		transform: scaleY(1);
 	}
 </style>
