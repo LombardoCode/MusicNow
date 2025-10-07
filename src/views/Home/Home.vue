@@ -31,7 +31,6 @@ export default {
 	},
 	data() {
 		return {
-			baseUrl: process.env.VUE_APP_CLIENT,
 			search_query: "",
 			tracks: [],
 		};
