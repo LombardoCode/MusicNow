@@ -10,7 +10,7 @@
 			<P>{{ item.title }}</P>
 		</div>
 		<div class="px-5">
-			<PSmall>{{ item.nb_tracks }} canciones</PSmall>
+			<PSmall>{{ item.nb_tracks }} songs</PSmall>
 		</div>
 	</div>
 </template>

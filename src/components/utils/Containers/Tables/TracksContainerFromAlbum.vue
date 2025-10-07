@@ -3,9 +3,9 @@
 		<table class="w-full">
 			<thead>
 				<tr class="text-left">
-					<th class="py-2">Canción</th>
-					<th class="py-2">Artista</th>
-					<th class="py-2">Duración</th>
+					<th class="py-2">Song</th>
+					<th class="py-2">Artist</th>
+					<th class="py-2">Duration</th>
 				</tr>
 			</thead>
 			<tbody>

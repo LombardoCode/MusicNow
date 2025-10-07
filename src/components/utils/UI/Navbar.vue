@@ -12,8 +12,8 @@
 				</div>
 				<nav id="navbar" class="transform md:block" :class="{'h-0 md:h-auto scale-y-0 md:scale-y-100': !menuToggled, 'h-full scale-y-100 block': menuToggled}">
 					<ul class="flex flex-col md:flex-row">
-						<li><Link to="/" txt="Inicio" /></li>
-						<li><Link to="/about" txt="Acerca de" /></li>
+						<li><Link to="/" txt="Home" /></li>
+						<li><Link to="/about" txt="About" /></li>
 					</ul>
 				</nav>
 			</div>

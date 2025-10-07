@@ -10,7 +10,7 @@
 			<P>{{ item.title }}</P>
 		</div>
 		<div class="px-5" v-if="item.artist != null">
-			<PSmall>De {{ item.artist.name }}</PSmall>
+			<PSmall>By {{ item.artist.name }}</PSmall>
 		</div>
 	</router-link>
 </template>

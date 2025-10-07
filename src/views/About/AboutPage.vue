@@ -9,7 +9,7 @@
 		<p class="text-center text-xl md:text-2xl mb-10">2021</p>
 		<div class="flex flex-col md:flex-row justify-center">
 			<a
-				href="https://www.linkedin.com/in/lombardo-m-bba399218/"
+				href="https://www.linkedin.com/in/lomoro/"
 				class="text-2xl border-2 border-red-500 px-3 py-6 md:py-2 rounded-md transition-all duration-200 hover:bg-red-500 hover:text-white mb-5 md:mb-0 md:mr-5 text-center"
 			>
 				<i class="fab fa-linkedin"></i>

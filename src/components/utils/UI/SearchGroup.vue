@@ -4,15 +4,15 @@
 			<InputSearch
 				type="text"
 				name="query_text"
-				placeholder="Búsqueda de canciones"
+				placeholder="Search songs, playlists, albums and artists"
 				v-on:keyup.enter="search()"
 				v-model="search_query"
 			/>
 			<TagContainer>
-				<Tag name="SearchSong">Canciones</Tag>
+				<Tag name="SearchSong">Songs</Tag>
 				<Tag name="SearchPlaylist">Playlists</Tag>
-				<Tag name="SearchAlbum">Albumes</Tag>
-				<Tag name="SearchArtist">Artistas</Tag>
+				<Tag name="SearchAlbum">Albums</Tag>
+				<Tag name="SearchArtist">Artists</Tag>
 			</TagContainer>
 		</Container>
 		<router-view></router-view>

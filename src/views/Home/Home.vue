@@ -1,6 +1,6 @@
 <template>
 	<Container>
-		<H1 class="text-center mt-5">¿Qué vamos a escuchar hoy?</H1>
+		<H1 class="text-center mt-5">What are we going to listen to today?</H1>
 		<form
 			class="flex flex-col md:flex-row md:justify-center text-center mt-6"
 			@submit.prevent="searchResults()"
@@ -8,10 +8,10 @@
 			<Input
 				type="text"
 				name="query_text"
-				placeholder="Búsqueda de canciones"
+				placeholder="Search songs, playlists, albums and artists"
 				v-model="search_query"
 			/>
-			<Button class="mt-2 md:mt-0 md:ml-2" txt="Buscar"></Button>
+			<Button class="mt-2 md:mt-0 md:ml-2" txt="Search"></Button>
 		</form>
 	</Container>
 </template>

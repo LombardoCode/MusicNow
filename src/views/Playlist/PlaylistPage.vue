@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div id="tracks" class="my-10">
-				<H3>Canciones</H3>
+				<H3>Songs</H3>
 				<TracksContainerFromPlaylist>
 					<TrackInPlaylist
 						v-for="(item, index) in playlist.tracks"
